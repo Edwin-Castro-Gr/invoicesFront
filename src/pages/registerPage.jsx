@@ -15,7 +15,7 @@ export const Register = () => {
   const handleRegister = async () => {
     try {
       // Realiza la llamada a la API para registrar un nuevo usuario
-      const response = await axios.post('http://localhost:3000/api/v0/empleados', { user: username, password, email })
+      const response = await axios.post('https://backend-invoice.onrender.com/api/v0/empleados', { user: username, password, email })
       console.log(response);
 
       // Verifica si la respuesta es exitosa
