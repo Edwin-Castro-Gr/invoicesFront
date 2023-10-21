@@ -1,0 +1,82 @@
+[
+    {
+        "ID Client": 1,
+        "Client": "Client A",
+        "Nit": "NIT-12345",
+        "Direction": "123 Main St, City",
+        "NumberPhone": "+1234567890",
+        "Email": "clientA@example.com"
+    },
+    {
+        "ID Client": 2,
+        "Client": "Client B",
+        "Nit": "NIT-54321",
+        "Direction": "456 Elm St, Town",
+        "NumberPhone": "+9876543210",
+        "Email": "clientB@example.com"
+    },
+    {
+        "ID Client": 3,
+        "Client": "Client C",
+        "Nit": "NIT-67890",
+        "Direction": "789 Oak St, Village",
+        "NumberPhone": "+5678901234",
+        "Email": "clientC@example.com"
+    },
+    {
+        "ID Client": 4,
+        "Client": "Client D",
+        "Nit": "NIT-23456",
+        "Direction": "234 Pine St, Suburb",
+        "NumberPhone": "+2345678901",
+        "Email": "clientD@example.com"
+    },
+    {
+        "ID Client": 5,
+        "Client": "Client E",
+        "Nit": "NIT-78901",
+        "Direction": "567 Cedar St, County",
+        "NumberPhone": "+6789012345",
+        "Email": "clientE@example.com"
+    },
+    {
+        "ID Client": 6,
+        "Client": "Client F",
+        "Nit": "NIT-34567",
+        "Direction": "890 Birch St, State",
+        "NumberPhone": "+7890123456",
+        "Email": "clientF@example.com"
+    },
+    {
+        "ID Client": 7,
+        "Client": "Client G",
+        "Nit": "NIT-90123",
+        "Direction": "123 Oak St, Province",
+        "NumberPhone": "+8901234567",
+        "Email": "clientG@example.com"
+    },
+    {
+        "ID Client": 8,
+        "Client": "Client H",
+        "Nit": "NIT-45678",
+        "Direction": "456 Pine St, Country",
+        "NumberPhone": "+9012345678",
+        "Email": "clientH@example.com"
+    },
+    {
+        "ID Client": 9,
+        "Client": "Client I",
+        "Nit": "NIT-12309",
+        "Direction": "789 Elm St, Kingdom",
+        "NumberPhone": "+1230987654",
+        "Email": "clientI@example.com"
+    },
+    {
+        "ID Client": 10,
+        "Client": "Client J",
+        "Nit": "NIT-54321",
+        "Direction": "234 Birch St, Empire",
+        "NumberPhone": "+4321098765",
+        "Email": "clientJ@example.com"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "idProject": "000",
+        "nameProject": "Project 1",
+        "client": "Client A",
+        "description": "This is the description for Project 1",
+        "dateStart": "2023-01-15",
+        "dateEnd": "2023-02-28"
+    },
+    {
+        "idProject": "001",
+        "nameProject": "Project 2",
+        "client": "Client B",
+        "description": "Description for Project 2 goes here",
+        "dateStart": "2023-02-10",
+        "dateEnd": "2023-03-25"
+    },
+    {
+        "idProject": "002",
+        "nameProject": "Project 3",
+        "client": "Client C",
+        "description": "Description for Project 3",
+        "dateStart": "2023-03-05",
+        "dateEnd": "2023-04-15"
+    },
+    {
+        "idProject": "003",
+        "nameProject": "Project 4",
+        "client": "Client D",
+        "description": "Description for Project 4",
+        "dateStart": "2023-04-20",
+        "dateEnd": "2023-05-30"
+    },
+    {
+        "idProject": "004",
+        "nameProject": "Project 5",
+        "client": "Client E",
+        "description": "Project 5 description here",
+        "dateStart": "2023-06-01",
+        "dateEnd": "2023-07-10"
+    },
+    {
+        "idProject": "005",
+        "nameProject": "Project 6",
+        "client": "Client F",
+        "description": "Description for Project 6",
+        "dateStart": "2023-07-15",
+        "dateEnd": "2023-08-25"
+    },
+    {
+        "idProject": "006",
+        "nameProject": "Project 7",
+        "client": "Client G",
+        "description": "Description for Project 7",
+        "dateStart": "2023-09-05",
+        "dateEnd": "2023-10-15"
+    },
+    {
+        "idProject": "007",
+        "nameProject": "Project 8",
+        "client": "Client H",
+        "description": "Description for Project 8",
+        "dateStart": "2023-10-20",
+        "dateEnd": "2023-11-30"
+    },
+    {
+        "idProject": "008",
+        "nameProject": "Project 9",
+        "client": "Client I",
+        "description": "Project 9 description",
+        "dateStart": "2023-12-05",
+        "dateEnd": "2024-01-15"
+    },
+    {
+        "idProject": "009",
+        "nameProject": "Project 10",
+        "client": "Client J",
+        "description": "Description for Project 10",
+        "dateStart": "2024-02-01",
+        "dateEnd": "2024-03-10"
+    }
+]

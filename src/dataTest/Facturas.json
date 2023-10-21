@@ -1,0 +1,112 @@
+[
+    {
+        "IdFactura": 1,
+        "idProyecto": "Proyecto 1",
+        "nombreProyecto": "Proyecto 1",
+        "Cliente": "Cliente A",
+        "FechaEmision": "2023-01-10",
+        "TarifaHora": 50,
+        "TotalHoras": 20,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    },
+    {
+        "IdFactura": 2,
+        "idProyecto": "Proyecto 2",
+        "nombreProyecto": "Proyecto 2",
+        "Cliente": "Cliente B",
+        "FechaEmision": "2023-01-15",
+        "TarifaHora": 45,
+        "TotalHoras": 25,
+        "TotalFactura": "",
+        "EstadoFactura": "Pendiente"
+    },
+    {
+        "IdFactura": 3,
+        "idProyecto": "Proyecto 3",
+        "nombreProyecto": "Proyecto 3",
+        "Cliente": "Cliente C",
+        "FechaEmision": "2023-02-02",
+        "TarifaHora": 60,
+        "TotalHoras": 15,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    },
+    {
+        "IdFactura": 4,
+        "idProyecto": "Proyecto 1",
+        "nombreProyecto": "Proyecto 1",
+        "Cliente": "Cliente A",
+        "FechaEmision": "2023-02-12",
+        "TarifaHora": 50,
+        "TotalHoras": 30,
+        "TotalFactura": "",
+        "EstadoFactura": "Pendiente"
+    },
+    {
+        "IdFactura": 5,
+        "idProyecto": "Proyecto 4",
+        "nombreProyecto": "Proyecto 4",
+        "Cliente": "Cliente D",
+        "FechaEmision": "2023-03-05",
+        "TarifaHora": 55,
+        "TotalHoras": 22,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    },
+    {
+        "IdFactura": 6,
+        "idProyecto": "Proyecto 2",
+        "nombreProyecto": "Proyecto 2",
+        "Cliente": "Cliente B",
+        "FechaEmision": "2023-03-10",
+        "TarifaHora": 45,
+        "TotalHoras": 18,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    },
+    {
+        "IdFactura": 7,
+        "idProyecto": "Proyecto 5",
+        "nombreProyecto": "Proyecto 5",
+        "Cliente": "Cliente E",
+        "FechaEmision": "2023-04-01",
+        "TarifaHora": 70,
+        "TotalHoras": 24,
+        "TotalFactura": "",
+        "EstadoFactura": "Pendiente"
+    },
+    {
+        "IdFactura": 8,
+        "idProyecto": "Proyecto 3",
+        "nombreProyecto": "Proyecto 3",
+        "Cliente": "Cliente C",
+        "FechaEmision": "2023-04-10",
+        "TarifaHora": 60,
+        "TotalHoras": 10,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    },
+    {
+        "IdFactura": 9,
+        "idProyecto": "Proyecto 6",
+        "nombreProyecto": "Proyecto 6",
+        "Cliente": "Cliente F",
+        "FechaEmision": "2023-05-15",
+        "TarifaHora": 80,
+        "TotalHoras": 12,
+        "TotalFactura": "",
+        "EstadoFactura": "Pendiente"
+    },
+    {
+        "IdFactura": 10,
+        "idProyecto": "Proyecto 4",
+        "nombreProyecto": "Proyecto 4",
+        "Cliente": "Cliente D",
+        "FechaEmision": "2023-05-20",
+        "TarifaHora": 55,
+        "TotalHoras": 28,
+        "TotalFactura": "",
+        "EstadoFactura": "Pagada"
+    }
+]
