@@ -24,7 +24,7 @@ export function FormDataToJson() {
         const jsonData = JSON.stringify(formData);
 
         // Realiza una solicitud POST para enviar el JSON al servidor
-        fetch('http://localhost:3000/api/v0/proyectos', {
+        fetch(`https://backend-invoice.onrender.com/api/v0/proyectos/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
