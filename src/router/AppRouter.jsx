@@ -8,7 +8,7 @@ import Login from "../pages/Login";
 import TableClient from "../pages/TableClient";
 import TableInvoices from "../pages/TableInvoices";
 import TableProject from "../pages/TableProject";
-import Register from "../pages/registerPage";
+import {Register}from "../pages/registerPage";
 import { PrivateRoute } from "./PrivateRoute";
 
 
