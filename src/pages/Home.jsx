@@ -20,7 +20,7 @@ export default function Home() {
                     "Nuestro software de facturación de servicios web es la solución definitiva para simplificar la gestión de facturas en el entorno digital. Diseñado específicamente para negocios en línea, este software te permite crear, enviar y realizar un seguimiento de facturas de manera eficiente. Desde servicios de desarrollo web hasta consultoría en línea, nuestro software se adapta a tus necesidades. Olvídate de las complicaciones contables y mantén un control total sobre tus finanzas. Descubre la comodidad de gestionar tus facturas de servicios web con facilidad y precisión."
                 </p>
 
-                <Button onClick={()=>navigate("/login")}>Log In</Button>
+                <Button onClick={()=>navigate("/login")}>Log In OK</Button>
             </div>
         </div>
     );
