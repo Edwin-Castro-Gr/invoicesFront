@@ -14,7 +14,7 @@ function UpdateRowButton({ id, onUpdate }) {
       };
 
       // Realiza la solicitud PUT a la API con Axios para actualizar el recurso.
-      await axios.put(`http://localhost:3000/api/v0/proyectos/${id}`, updatedData);
+      await axios.put(`https://backend-invoice.onrender.com/api/v0/proyectos/${id}`, updatedData);
 
       // Llama a la función onUpdate para refrescar la interfaz u otra acción que necesites.
       onUpdate(id, updatedData);

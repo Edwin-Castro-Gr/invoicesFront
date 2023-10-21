@@ -6,7 +6,7 @@ function DeleteRowButton({ id, onDelete }) {
   const handleDelete = async () => {
     try {
       // Realiza la solicitud DELETE a la API con Axios
-      await axios.delete(`http://localhost:3000/api/v0/clientes/${id}`);
+      await axios.delete(`https://backend-invoice.onrender.com/api/v0/clientes/${id}`);
       
       // Llama a la función onDelete para eliminar la fila de la interfaz
       onDelete(id);
