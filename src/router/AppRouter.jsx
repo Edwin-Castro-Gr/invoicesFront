@@ -6,10 +6,10 @@ import FormProject from "../pages/FormProject";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import TableClient from "../pages/TableClient";
-import TableProject from "../pages/TableProject";
 import TableInvoices from "../pages/TableInvoices";
+import TableProject from "../pages/TableProject";
+import Register from "../pages/registerPage";
 import { PrivateRoute } from "./PrivateRoute";
-import { Register } from "../pages/registerPage";
 
 
 
@@ -47,6 +47,11 @@ export const AppRouter = () => {
           <PrivateRoute>
             <TableInvoices/>
           </PrivateRoute>} />
+
+          {/* <Route path="sign-up" element={
+          <PrivateRoute>
+            <RegisterPage/>
+          </PrivateRoute>} /> */}
         
         </Route>
       </Routes>
