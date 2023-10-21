@@ -21,7 +21,7 @@ export default function Login() {
     const handleLogin = async () => {
         try {
             // Realiza la llamada a la API para iniciar sesión
-            const response = await axios.post('https://backend-invoice.onrender.com/api/v0/empleados', { email, password });
+            const response = await axios.post('https://backend-invoice.onrender.com/api/v0/auth', { email, password });
 
             // Verifica si la respuesta es exitosa
             if (response.status === 206) {
