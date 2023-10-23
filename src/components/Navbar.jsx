@@ -38,8 +38,8 @@ function ColorSchemesExample() {
 
                     <Nav>
                         <NavDropdown title="Options" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="login">Change User</NavDropdown.Item>
-                            <NavDropdown.Item href="login">Logout</NavDropdown.Item>
+                            <NavDropdown.Item><Link to='login'>Change User</Link>></></NavDropdown.Item>
+                            <NavDropdown.Item><Link to="login">Logout</Link>></></NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Container>
