@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import {
     Button,
@@ -92,7 +92,7 @@ export default function Login() {
                         Log in
                     </Button>
                     <Typography
-                        endDecorator={<Navigate to="/sign-up">Sign up</Navigate>}
+                        endDecorator={<Link to="/sign-up">Sign up</Link>}
                         fontSize="sm"
                         sx={{ alignSelf: 'center' }}
                     >
