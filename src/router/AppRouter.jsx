@@ -8,7 +8,7 @@ import Login from "../pages/Login";
 import TableClient from "../pages/TableClient";
 import TableInvoices from "../pages/TableInvoices";
 import TableProject from "../pages/TableProject";
-import {Register}from "../pages/registerPage";
+import { Register }from "../pages/registerPage";
 import { PrivateRoute } from "./PrivateRoute";
 
 
@@ -17,11 +17,10 @@ export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="login" element={<Login />} />
         <Route path="sign-up" element={<Register />} />
+        <Route path="login" element={<Login />} />
         <Route index element={<Home />} />
         <Route path="/" element={<NavBar />}>
-        {/* <Route path="/FormClient" element={<FormClient />} /> */}
         
         <Route path="TableClient" element={
           <PrivateRoute>
@@ -47,11 +46,6 @@ export const AppRouter = () => {
           <PrivateRoute>
             <TableInvoices/>
           </PrivateRoute>} />
-
-          {/* <Route path="sign-up" element={
-          <PrivateRoute>
-            <RegisterPage/>
-          </PrivateRoute>} /> */}
         
         </Route>
       </Routes>
