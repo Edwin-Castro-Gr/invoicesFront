@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import {
     Button,
     FormControl,
     FormLabel,
     Input,
-    Link,
     Sheet,
     Typography
 } from '@mui/joy';
@@ -93,7 +92,7 @@ export default function Login() {
                         Log in
                     </Button>
                     <Typography
-                        endDecorator={<Link to="/sign-up">Sign up</Link>}
+                        endDecorator={<Navigate to="/sign-up">Sign up</Navigate>}
                         fontSize="sm"
                         sx={{ alignSelf: 'center' }}
                     >
