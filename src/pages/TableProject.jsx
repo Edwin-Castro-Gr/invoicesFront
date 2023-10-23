@@ -29,14 +29,29 @@ function TableSheet() {
         setEditingIndex(null); // Finaliza la edición
     };
 
+    // useEffect(() => {
+    //     // Simula la carga de datos desde un archivo JSON
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await import('../dataTest/projects.json');
+    //             setData(response.default);
+    //         } catch (error) {
+    //             console.error('Error al cargar datos JSON:', error);
+    //         }
+    //     };
+
+    //     fetchData();
+    // }, []);
+
+
     useEffect(() => {
-        // Simula la carga de datos desde un archivo JSON
+        // Cargar datos desde la URL utilizando Axios
         const fetchData = async () => {
             try {
-                const response = await import('../dataTest/projects.json');
-                setData(response.default);
+                const response = await axios.get('https://backend-invoice.onrender.com/api/v0/proyectos');
+                setData(response.data);
             } catch (error) {
-                console.error('Error al cargar datos JSON:', error);
+                console.error('Error al cargar datos desde la URL:', error);
             }
         };
 

@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
-import { PDFDownloadLink, Page, StyleSheet, Text, View, Document } from '@react-pdf/renderer';
 import Button from '@mui/joy/Button';
+import { Document, PDFDownloadLink, Page, StyleSheet, Text, View } from '@react-pdf/renderer';
+import React, { useRef } from 'react';
 
 // Componente para el PDF
 const PDFDocument = React.forwardRef(({ data }, ref) => (

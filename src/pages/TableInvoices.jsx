@@ -1,29 +1,46 @@
-import Button from '@mui/joy/Button';
 import Sheet from '@mui/joy/Sheet';
 import Table from '@mui/joy/Table';
 import React, { useEffect, useState } from 'react';
 // import deleteProject from '../components/DeleteClientButton';
 // import editProject from '../components/Edit';
-import ExportPDFButton from '../components/PDFDocument';
 import Input from '@mui/joy/Input';
+import ExportPDFButton from '../components/PDFDocument';
+
+// // Datos desde el json
+// function TableSheet() {
+//     const [data, setData] = useState([]);
+//     const [searchTerm, setSearchTerm] = useState("");
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             try {
+//                 const response = await import('../dataTest/Facturas.json');
+//                 setData(response.default);
+//             } catch (error) {
+//                 console.error('Error al cargar datos JSON:', error);
+//             }
+//         };
+
+//         fetchData();
+//     }, []);
 
 
-function TableSheet() {
-    const [data, setData] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
+const [data, setData] = useState([]);
+useEffect(() => {
+    // Cargar datos desde la URL utilizando Axios
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('https://backend-invoice.onrender.com/api/v0/facturas');
+            setData(response.data);
+        } catch (error) {
+            console.error('Error al cargar datos desde la URL:', error);
+        }
+    };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await import('../dataTest/Facturas.json');
-                setData(response.default);
-            } catch (error) {
-                console.error('Error al cargar datos JSON:', error);
-            }
-        };
+    fetchData();
+}, []);
 
-        fetchData();
-    }, []);
+
 
     return (
         <>
