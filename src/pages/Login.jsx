@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import {
@@ -96,7 +96,7 @@ export default function Login() {
                         fontSize="sm"
                         sx={{ alignSelf: 'center' }}
                     >
-                        Don't have an account?
+                        Don{`&apos`}t have an account?
                     </Typography>
                 </Sheet>
             </main>

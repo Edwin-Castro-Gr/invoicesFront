@@ -1,6 +1,5 @@
 import Sheet from '@mui/joy/Sheet';
 import Typography from '@mui/joy/Typography';
-import * as React from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -8,9 +7,12 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { useTokenContext } from "../utils/tokenContext";
+import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 export default function FormClient() {
-    const token= useTokenContext();
+    const token = useTokenContext();
+    const [, setData] = useState([]);
     const [validated, setValidated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
@@ -24,9 +26,9 @@ export default function FormClient() {
 
     if (!token) {
         return <Navigate to="/login" />;
-      }
+    }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -35,22 +37,37 @@ export default function FormClient() {
             // Si el formulario es válido, muestra la alerta y configura el mensaje
             setAlertMessage('Added Client');
             setShowAlert(true);
-
-            // Reinicia el formulario después de 2 segundos
-            setTimeout(() => {
-                setFormData({
-                    name: '',
-                    nit: '',
-                    direction: '',
-                    phone: '',
-                    email: '',
+            try {
+                const response = await axios.post('https://backend-invoice.onrender.com/api/v0/clientes', {
+                    'name': formData.name,
+                    'email': formData.email,
+                    'address': formData.direction,
+                    'nui': formData.nit,
+                    'phoneNumber': formData.phone,
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token //the token is a variable which holds the token
+                    }
                 });
-                setShowAlert(false);
-                setValidated(false);
-            }, 2000);
+                setData(response.data);
+                // Reinicia el formulario después de 1 segundos
+                setTimeout(() => {
+                    setFormData({
+                        name: '',
+                        nit: '',
+                        direction: '',
+                        phone: '',
+                        email: '',
+                    });
+                    setShowAlert(false);
+                    setValidated(false);
+                }, 1000);
+                setValidated(true);
+            } catch (error) {
+                console.error('Error al cargar datos desde la URL:', error);
+            }
         }
-
-        setValidated(true);
     };
 
     const handleInputChange = (event) => {
@@ -61,7 +78,7 @@ export default function FormClient() {
     return (
         <>
             <div className="App-header">
-                <main style={{ marginTop: "-180px", display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
                     <Sheet
                         sx={{
                             textAlign: 'center',
@@ -174,7 +191,7 @@ export default function FormClient() {
                             </div>
                         )}
                     </Sheet>
-                </main>
+                </div>
             </div>
         </>
     );

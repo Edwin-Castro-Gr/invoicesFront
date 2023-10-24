@@ -1,9 +1,11 @@
 import Button from '@mui/joy/Button';
 import Sheet from '@mui/joy/Sheet';
 import Table from '@mui/joy/Table';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import DeleteRowButton from '../components/DeleteProjectButton';
+import { Navigate } from 'react-router-dom';
 import { useTokenContext } from "../utils/tokenContext";
+import axios from 'axios';
 
 export default function TableSheet() {
 
@@ -13,7 +15,11 @@ export default function TableSheet() {
         // Cargar datos desde la URL utilizando Axios
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://backend-invoice.onrender.com/api/v0/clientes');
+                const response = await axios.get('https://backend-invoice.onrender.com/api/v0/clientes', {
+                    headers: {
+                        'Authorization': 'Bearer ' + token //bring the token saved in the custom provider
+                    }
+                });
                 setData(response.data);
             } catch (error) {
                 console.error('Error al cargar datos desde la URL:', error);
@@ -61,7 +67,7 @@ export default function TableSheet() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.map((row, index) => (
+                                {data?.map((row, index) => (
                                     <tr key={index}>
                                         <td>
                                             <Button
@@ -88,8 +94,6 @@ export default function TableSheet() {
                         </Table>
                     </Sheet>
                 </main>
-
-
             </div>
 
         </>
