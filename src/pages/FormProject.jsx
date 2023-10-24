@@ -35,6 +35,10 @@ export default function FormClient() {
         setValidated(true);
     };
 
+    if (!token) {
+        return <Navigate to="/login" />;
+      }
+
     return (
         <>
             <div className="App-header">

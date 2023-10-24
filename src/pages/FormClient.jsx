@@ -20,6 +20,10 @@ export default function FormClient() {
         email: '',
     });
 
+    if (!token) {
+        return <Navigate to="/login" />;
+      }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.currentTarget;

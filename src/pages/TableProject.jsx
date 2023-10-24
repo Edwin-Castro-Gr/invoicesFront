@@ -29,20 +29,9 @@ function TableSheet() {
         setEditingIndex(null); // Finaliza la edición
     };
 
-    // useEffect(() => {
-    //     // Simula la carga de datos desde un archivo JSON
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await import('../dataTest/projects.json');
-    //             setData(response.default);
-    //         } catch (error) {
-    //             console.error('Error al cargar datos JSON:', error);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, []);
-
+    if (!token) {
+        return <Navigate to="/login" />;
+    }
 
     useEffect(() => {
         // Cargar datos desde la URL utilizando Axios
