@@ -3,9 +3,11 @@ import Table from '@mui/joy/Table';
 import React, { useEffect, useState } from 'react';
 import Input from '@mui/joy/Input';
 import ExportPDFButton from '../components/PDFDocument';
+import { useTokenContext } from "../utils/tokenContext";
 
 function TableSheet() {
 
+    const token = useTokenContext();
     const [data, setData] = useState([]);
     useEffect(() => {
         // Cargar datos desde la URL utilizando Axios

@@ -3,36 +3,11 @@ import Sheet from '@mui/joy/Sheet';
 import Table from '@mui/joy/Table';
 import React, { useEffect, useState } from 'react';
 import DeleteRowButton from '../components/DeleteProjectButton';
-
-
-
-
-
-// Define la función handleRowDelete que elimina una fila del estado data
-const handleRowDelete = (index) => {
-    const newData = [...data];
-    newData.splice(index, 1);
-    setData(newData);
-};
-
-
-
+import { useTokenContext } from "../utils/tokenContext";
 
 export default function TableSheet() {
 
-
-    // // Simula la carga de datos desde un archivo JSON
-    // const [data, setData] = useState([]);
-    // useEffect(() => {
-    //     import('../dataTest/client.json')
-    //         .then((jsonData) => {
-    //             setData(jsonData.default);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error al cargar datos JSON:', error);
-    //         });
-    // }, []);
-
+    const token = useTokenContext();
     const [data, setData] = useState([]);
     useEffect(() => {
         // Cargar datos desde la URL utilizando Axios
@@ -47,6 +22,13 @@ export default function TableSheet() {
 
         fetchData();
     }, []);
+
+    // Define la función handleRowDelete que elimina una fila del estado data
+    const handleRowDelete = (index) => {
+        const newData = [...data];
+        newData.splice(index, 1);
+        setData(newData);
+    };
 
     if (!token) {
         return <Navigate to="/login" />;

@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import * as React from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { Link, Outlet, useLocation } from "react-router-dom";
 

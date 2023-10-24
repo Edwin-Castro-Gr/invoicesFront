@@ -7,8 +7,10 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { useTokenContext } from "../utils/tokenContext";
 
 export default function FormClient() {
+    const token= useTokenContext();
     const [validated, setValidated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');

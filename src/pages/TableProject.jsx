@@ -4,8 +4,11 @@ import Table from '@mui/joy/Table';
 import React, { useEffect, useState } from 'react';
 import DeleteRowButton from '../components/DeleteClientButton';
 import EditRowForm from '../components/EditRowForm'; // Importa el nuevo formulario de edición
+import { useTokenContext } from "../utils/tokenContext";
 
 function TableSheet() {
+
+    const token= useTokenContext();
     const [data, setData] = useState([]);
     const [editingIndex, setEditingIndex] = useState(null); // Nuevo estado para rastrear la fila en edición
 
