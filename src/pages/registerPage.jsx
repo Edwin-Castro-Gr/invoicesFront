@@ -1,4 +1,4 @@
-  import {
+import {
   Button,
   FormControl,
   FormLabel,
@@ -7,9 +7,8 @@
   Typography
 } from '@mui/joy';
 import axios from "axios";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { useTokenLogInContext } from "../utils/tokenContext";
 
 export const Register = () => {
   const [username, setUsername] = useState('');
@@ -19,8 +18,6 @@ export const Register = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
 
-  // Obtén el contexto del token
-  const logIn = useTokenLogInContext();
   const navigate = useNavigate();
 
   const handleRegister = async () => {
@@ -31,13 +28,13 @@ export const Register = () => {
 
       // Verifica si la respuesta es exitosa
       if (response.status === 201) {
-        // Muestra el alert después de 2 segundos
+        // Muestra el alert después de 0,5 segundos
         setAlertMessage('Usuario agregado con éxito');
         setShowAlert(true);
         setTimeout(() => {
-          // Redirige a la otra página después de 2 segundos
+          // Redirige a la otra página después de 0,5 segundos
           navigate("/login");
-        }, 2000);
+        }, 500);
       } else {
         // Si la respuesta no es exitosa, muestra un mensaje de error
         console.error('Error al registrar usuario');
@@ -49,7 +46,7 @@ export const Register = () => {
 
   return (
     <div className="App-header">
-      <main>
+      <form>
         <Sheet
           sx={{
             textAlign: 'center',
@@ -114,7 +111,7 @@ export const Register = () => {
             </div>
           )}
         </Sheet>
-      </main>
+      </form>
     </div>
   );
 };

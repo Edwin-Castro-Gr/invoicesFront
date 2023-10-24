@@ -41,7 +41,7 @@ export default function Login() {
 
     return (
         <div className="App-header">
-            <main>
+            <form>
                 <Sheet
                     sx={{
                         textAlign: 'center',
@@ -99,7 +99,7 @@ export default function Login() {
                         Don{`&apos`}t have an account?
                     </Typography>
                 </Sheet>
-            </main>
+            </form>
         </div>
     );
 }
